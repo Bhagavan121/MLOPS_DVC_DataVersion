@@ -16,3 +16,20 @@
 12. Then git add-commit-push (we're saving V2 of our data at this point)
 13. Check dvc/git status, everything should be upto date.
 14. Now repeat step 10-12 for v3 of data.
+
+----------------------------------------------------------------------------------
+**Extension - DVC has to be installed**
+dvc init (creates .dvcignore, .dvc)
+<locate dvc to global if any error thrown>
+----------------------------------------------------------
+mkdir %temp%/dvcstore or mkdir temp   or   dvc remote add -d myremote %temp%/dvcstore   or   dvc remote add -d myremote temp
+----------------------------------------------------------
+dvc add data/ (creates data.dvc)
+git add .gitignore data.dvc
+dvc commit - dvc push
+dvc status - git status
+dvc push
+-------------------------------------------------------------------------
+git log --oneline
+git checkout <hash> - git checkout master
+dvc pull
